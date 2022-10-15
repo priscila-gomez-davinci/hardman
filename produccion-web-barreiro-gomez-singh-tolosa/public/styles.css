@@ -8,6 +8,7 @@ body {
   h1, h2 , h3,label, footer{
     color: #105469;
     font-weight: 700;
+    position: relative; 
   }
   
   .container .col{

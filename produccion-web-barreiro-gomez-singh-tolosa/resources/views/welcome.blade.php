@@ -10,9 +10,9 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../styles/styles.css" />
+        <link rel="stylesheet" href=".css/styles.css" />
         <link rel="stylesheet" href="sweetalert2.min.css">
-
+    </head>
 
 <body>
   <!-- JavaScript -->

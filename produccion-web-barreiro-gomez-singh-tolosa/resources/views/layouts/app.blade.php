@@ -14,18 +14,19 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
         <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="sweetalert2.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css">  
+        <!-- JavaScript -->
+    <script src="../lib/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../lib/popper/popper.min.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src= "..scripts/dialog.js"></script>
 
+
+</head>
 
 <body>
-  <!-- JavaScript -->
-  <script src="../lib/jquery/jquery-3.3.1.min.js"></script>
-  <script src="../lib/popper/popper.min.js"></script>
-  <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="/cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src= "..scripts/dialog.js"></script>
-
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
@@ -84,7 +85,7 @@
                         </li>
                         @endguest
                         
-                           <li class="nav-item">
+                        <li class="nav-item">
                         <a class="nav-link" href="home">Home</a>
                         </li>
                         <li class="nav-item">

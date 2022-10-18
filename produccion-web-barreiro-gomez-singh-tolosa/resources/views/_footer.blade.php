@@ -1,3 +1,6 @@
+@section('style')
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+@endsection
 <footer class="footer-cambios mt-auto">
   <div>
     <div class="">

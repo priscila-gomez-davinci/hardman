@@ -83,14 +83,18 @@
                         <a class="nav-link" href="carrito.php">Carrito</a>
                         </li>
                         @endguest
+                        
                            <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" href="index">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="gallery.php">Galería</a>
+                        <a class="nav-link" href="productos">Productos</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="contact.php">Contacto</a>
+                        <a class="nav-link" href="ingresos">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="contacto">Contacto</a>
                         </li>
                     </ul>
                 </div>

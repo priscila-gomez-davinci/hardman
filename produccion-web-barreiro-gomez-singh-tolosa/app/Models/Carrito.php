@@ -9,8 +9,14 @@ class Carrito extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'precio', 
+        'items'
+    ];   
+
     public function content()
     {
         return $this->hasMany(Producto::class);
     }
+
 }

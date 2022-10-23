@@ -1,20 +1,23 @@
 @extends('layouts.app')
+@section('style')
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+@endsection
 @section('content')
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <?php
-  include_once('_imports.php');
-  ?>
   <header>
-    <?php
-    include_once('_navbar.php');
-    ?>
   </header>
   <h1 class="container seccion text-center margen-bottom">
     Galería de nuevos ingresos
   </h1>
-  <?php foreach ($productos as $producto) : ?>
+  <?php 
+    use App\Models\Ingreso;
+  
+    $productos = Ingreso::all();
+
+  
+  foreach ($productos as $producto) : ?>
     <div class="container seccion margen-bottom">
       <div class="row">
         <div class="col-md-6">
@@ -30,7 +33,6 @@
       </div>
     </div>
   <?php endforeach ?>
-  <?php
-  include_once('_footer.php');
-  ?>
   </body>
+  <?php echo View::make('_footer'); ?>
+  @endsection

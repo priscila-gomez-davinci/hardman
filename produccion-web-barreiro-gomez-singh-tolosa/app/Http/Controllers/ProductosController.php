@@ -10,4 +10,6 @@ class ProductosController extends Controller
     {
         return view('productos');
     }
+
+    
 }

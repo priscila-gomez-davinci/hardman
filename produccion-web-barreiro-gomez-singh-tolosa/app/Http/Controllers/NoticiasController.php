@@ -2,12 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Noticia;
 
 class NoticiasController extends Controller
 {
-    public function noticias()
+    public function index()
     {
-        return view('noticias');
+    $noticias = Noticia::all();
+        return view('noticias.index', [
+            'noticias' => $noticias
+        ]);
+    }
+
+    public function show(Noticia $noticia)
+    {
+        return view('noticias.show', [
+            'noticia' => $noticia
+        ]);
     }
 }

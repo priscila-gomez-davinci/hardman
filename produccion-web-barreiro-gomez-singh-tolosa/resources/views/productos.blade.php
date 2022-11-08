@@ -1,17 +1,17 @@
 @extends('layouts.app')
 @section('content')
 
-
-
+@section('scripts')
+<script src="../js/app.js"></script>
+@endsection
+@section('style')
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+@endsection
 <?php
-
 use App\Models\Producto;
-  
+
 $productos = Producto::all();
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -44,7 +44,7 @@ $productos = Producto::all();
             <p> $<?php echo $producto['precio'] ?></p>
           </div>
           <div>
-            <button id="add" class="btn-primary button">Agregar</button>
+            <button id="boton" class="btn-primary button">Agregar</button>
             </div>
           </div>
         </div>
@@ -57,6 +57,11 @@ $productos = Producto::all();
 
 </html>
 
+<?php echo View::make('_footer'); ?>
+  @endsection
+
+  @section('scripts')
+  <script src="sweetalert2.all.min.js"></script>
 <script>
 const btns = document.querySelectorAll('.boton');
   for (let i = 0; i < btns.length; i++) {
@@ -69,28 +74,4 @@ const btns = document.querySelectorAll('.boton');
     });
   }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php echo View::make('_footer'); ?>
-  @endsection
+@endsection

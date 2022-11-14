@@ -20,10 +20,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/productos', [App\Http\Controllers\ProductosController::class, 'productos'])->name('productos');
 Route::get('/carrito', [App\Http\Controllers\CarritoController::class, 'carrito'])->name('carrito');
 Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingresos'])->name('ingresos');
-Route::get('noticias', [App\Http\Controllers\NoticiasController::class, 'index'])->name('noticias.index');;
+Route::get('noticias', [App\Http\Controllers\NoticiasController::class, 'index'])->name('noticias.index');
 Route::get('/contacto', [App\Http\Controllers\ContactoController::class, 'contacto'])->name('contacto');
-Route::get('noticias/{noticia}', [App\Http\Controllers\NoticiasController::class, 'show'])->name('noticias.show');;
-Route::get('noticia', [App\Http\Controllers\NoticiasController::class, 'create'])->name('noticias.create');;
+Route::get('noticias/{noticia}', [App\Http\Controllers\NoticiasController::class, 'show'])->name('noticias.show');
+Route::get('noticia', [App\Http\Controllers\NoticiasController::class, 'create'])->name('noticias.create');

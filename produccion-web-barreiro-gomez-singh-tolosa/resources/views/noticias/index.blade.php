@@ -37,7 +37,7 @@
                                             <td> {{ $noticia->descripcion }} </td>
                                             <td> </td>
                                             <td>
-                                                <a class="btn btn-primary" href="{{ route('noticias.index', ['noticia' => $noticia]) }}"> Ingresar </a>
+                                                <a class="btn btn-primary" href="{{ route('noticias.show', ['noticia' => $noticia]) }}"> Ingresar </a>
                                             </td>
                                         </tr>
                                     @endforeach                           

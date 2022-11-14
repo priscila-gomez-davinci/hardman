@@ -1,7 +1,6 @@
 <?php
-
 namespace App\Http\Controllers;
-
+use App\Models\Noticia;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,4 +24,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function getNews(){
+        $news = Noticia::all();
+        return $news;
+        
+    }
+
+
 }

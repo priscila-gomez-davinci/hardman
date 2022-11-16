@@ -16,7 +16,7 @@
                         @endif
 
                         <div class="mb-3">
-                        <a class="btn btn-primary" action="{{ route('noticias.create') }}"> Agregar Noticia </a>
+                        <a class="btn btn-primary" href="{{ route('noticias.create') }}"> Agregar Noticia </a>
                         </div>
 
                         <table class="table">
@@ -43,7 +43,7 @@
                                     @endforeach                           
                                 @else
                                     <tr>
-                                        <td class="text-center" colspan="4"> No existen productos cargados. </td>
+                                        <td class="text-center" colspan="4"> No existen noticias cargadas. </td>
                                     </tr>
                                 @endif
 

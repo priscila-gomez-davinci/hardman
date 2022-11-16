@@ -21,6 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('noticias', [App\Http\Controllers\NoticiaController::class, 'index'])->name('noticias.index');
-Route::get('/noticias/create', [App\Http\Controllers\NoticiaController::class, 'create'])->name('noticias.create');
+Route::get('noticias/create', [App\Http\Controllers\NoticiaController::class, 'create'])->name('noticias.create');
 Route::get('noticias/{noticia}', [App\Http\Controllers\NoticiaController::class, 'show'])->name('noticias.show');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 </head>
-<body class="d-flex flex-column min-vh-100"  style="background-color:grey;">
+<body class="d-flex flex-column min-vh-100">
   <h1 class="d-none">H1</h1>
   <h2 class="d-none">H2</h2>
   <div class="container">

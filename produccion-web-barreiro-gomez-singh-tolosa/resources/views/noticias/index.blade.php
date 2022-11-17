@@ -33,7 +33,7 @@
                                 @if ($noticias->count() > 0)
                                     @foreach ($noticias as $noticia)
                                         <tr>
-                                            <td><img src={{ $noticia->imagen }}> </td>
+                                            <td><img Storage::get({{ $noticia->imagen }});</td>
                                             <td> {{ $noticia->titulo }} </td>
                                             <td> {{ $noticia->descripcion }} </td>
                                             <td>

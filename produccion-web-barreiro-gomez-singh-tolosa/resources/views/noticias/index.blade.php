@@ -22,9 +22,9 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col"> Nombre </th>
+                                    <th scope="col">  Imagen </th>
+                                    <th scope="col"> Título </th>
                                     <th scope="col"> Descripcion </th>
-                                    <th scope="col">  </th>
                                     <th scope="col">  </th>
                                 </tr>
                             </thead>
@@ -33,9 +33,9 @@
                                 @if ($noticias->count() > 0)
                                     @foreach ($noticias as $noticia)
                                         <tr>
+                                            <td><img src={{ $noticia->imagen }}> </td>
                                             <td> {{ $noticia->titulo }} </td>
                                             <td> {{ $noticia->descripcion }} </td>
-                                            <td> </td>
                                             <td>
                                                 <a class="btn btn-primary" href="{{ route('noticias.show', ['noticia' => $noticia]) }}"> Ingresar </a>
                                             </td>

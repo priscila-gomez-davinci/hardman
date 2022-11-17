@@ -27,7 +27,7 @@ class NoticiaController extends Controller
 
     public function edit(Noticia $noticia)
     {
-        return view('noticia.edit', [
+        return view('noticias.edit', [
             'noticia' => $noticia
         ]);
     }
@@ -72,7 +72,7 @@ class NoticiaController extends Controller
     {
 
         $rules = [
-            'nombre' => 'required|max:255',
+            'titulo' => 'required',
             'descripcion' => 'required',
         ];
 
@@ -85,13 +85,13 @@ class NoticiaController extends Controller
 
         if($validator->fails()){
             return redirect()
-                ->route('productos.edit', $noticia)
+                ->route('noticias.edit', $noticia)
                 ->withErrors($validator)
                 ->withInput();
         }
 
         $data = [
-            'nombre' => $request->nombre,
+            'titulo' => $request->titulo,
             'descripcion' => $request->descripcion,
         ];
 

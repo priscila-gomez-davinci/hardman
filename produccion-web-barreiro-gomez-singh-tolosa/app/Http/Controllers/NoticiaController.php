@@ -32,6 +32,42 @@ class NoticiaController extends Controller
         ]);
     }
 
+
+    public function store(Request $request)
+    {
+
+        $validator = Validator::make($request->all(), [
+            'titulo' => 'required',
+            'descripcion' => 'required',
+            'imagen' => 'required|mimes:jpg,bmp,png',
+        ]);
+
+        if($validator->fails()){
+            return redirect()
+                ->route('noticias.create')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        //Guardamos el nombre del archivo, modificando el nombre original del cliente con time.
+        $imagen_nombre = time() . $request->file('imagen')->getClientOriginalName();
+
+        //Subimos el archivo a una carpeta del proyecto y guardamos el nombre con el que subió el archivo.
+        $imagen = $request->file('imagen')->storeAs('noticias', $imagen_nombre, 'public');
+        
+        Noticia::create([
+            'titulo' => $request->titulo,
+            'descripcion' => $request->descripcion,
+            'imagen' => $imagen
+        ]);
+
+        return redirect()
+            ->route('noticias.index')
+            ->with('status', 'La noticia se ha agregado correctamente.');
+    }
+
+
+
     public function update(Request $request, Noticia $noticia)
     {
 

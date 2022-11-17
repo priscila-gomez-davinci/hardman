@@ -38,34 +38,6 @@
       <img class="card-img-top" src="../images/MiddleBanner.jpg" alt="Publicidad procesador intel con imagen de personajes de Overwatch" />
     </div>
 
-
-
-    <?php
-    use App\Models\Noticia;
-
-    $noticias = Noticia::all();
-
-    ?>
-    <div class="card-group">
-        
-      <?php foreach ($noticias as $noticia) : ?>
-
-        <div class=<?php echo $noticia['visualizacion'] ?>>
-          <img class="card-img-top" src=<?php echo $noticia['imagen'] ?> height="180" width="230" />
-          <div class="card-body">
-            <p class="card-title">
-              <?php echo $noticia['titulo'] ?>
-            </p>
-            <p class="card-text">
-              <?php echo $noticia['descripcion'] ?>
-            </p>
-          </div>
-        </div>
-      <?php endforeach ?>
-    </div>
-
-
-    </body>
 <?php echo View::make('_footer'); ?>
 @endsection
 

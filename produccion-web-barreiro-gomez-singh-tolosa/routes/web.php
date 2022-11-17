@@ -24,3 +24,4 @@ Route::get('noticias', [App\Http\Controllers\NoticiaController::class, 'index'])
 Route::get('noticias/create', [App\Http\Controllers\NoticiaController::class, 'create'])->name('noticias.create');
 Route::get('noticias/{noticia}', [App\Http\Controllers\NoticiaController::class, 'show'])->name('noticias.show');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('noticias', [App\Http\Controllers\NoticiaController::class, 'store'])->name('noticias.store');

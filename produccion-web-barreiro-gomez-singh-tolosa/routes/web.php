@@ -28,3 +28,9 @@ Route::post('noticias', [App\Http\Controllers\NoticiaController::class, 'store']
 
 
 Route::resource('noticias', App\Http\Controllers\NoticiaController::class);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/productos', [App\Http\Controllers\ProductosController::class, 'productos'])->name('productos');
+Route::get('/carrito', [App\Http\Controllers\CarritoController::class, 'carrito'])->name('carrito');
+Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingresos'])->name('ingresos');
+Route::get('/contacto', [App\Http\Controllers\ContactoController::class, 'contacto'])->name('contacto');

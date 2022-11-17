@@ -11,15 +11,19 @@
                     <hr>
                     <a class="btn btn-primary" href="{{ route('noticias.index') }}"> Volver a noticias </a>
                     <a class="btn btn-success" href="{{ route('noticias.edit', ['noticia' => $noticia]) }}"> Editar noticia </a>
-                    <form class="d-inline" method="POST" action="{{ route('noticias.destroy', $noticia) }}">
+                    <form id="form-delete" class="d-inline" method="POST" action="{{ route('noticias.destroy', $noticia) }}">
                         @csrf
                         @method('DELETE')
-                    <button class="btn btn-danger" type="submit"> Eliminar </button>
+                    <button id= "form-submit" class="btn btn-danger" type="submit"> Eliminar </button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@vite(['resources/js/noticias/show.js'])
+
+
+
 
 @endsection

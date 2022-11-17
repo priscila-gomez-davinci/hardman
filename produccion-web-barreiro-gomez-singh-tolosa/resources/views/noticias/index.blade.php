@@ -49,8 +49,9 @@
 
                             </tbody>
                         </table>
-                    </div>
 
+                        {{$noticias->links() }}
+                    </div>
                 </div>
             </div>
         </div>

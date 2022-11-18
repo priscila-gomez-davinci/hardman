@@ -27,7 +27,7 @@
   <h1 class="d-none">H1</h1>
   <h2 class="d-none">H2</h2>
 </head>
-<body class="d-flex flex-column min-vh-100"  style="background-color:grey;">
+<body class="d-flex flex-column min-vh-100">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 col-lg-6 pb-5">

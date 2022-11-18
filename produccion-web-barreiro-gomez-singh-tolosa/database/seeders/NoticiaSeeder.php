@@ -16,6 +16,6 @@ class NoticiaSeeder extends Seeder
      */
     public function run()
     {
-        Noticia::factory(50)->create();
+        Noticia::factory(25)->create();
     }
 }

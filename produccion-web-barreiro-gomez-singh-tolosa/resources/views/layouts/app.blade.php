@@ -69,7 +69,6 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="carrito">Carrito</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -91,19 +90,15 @@
                         <a class="nav-link" href="productos">Productos</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="ingresos">Ingresos</a>
-                        </li>
-                        <li class="nav-item">
                         <a class="nav-link" href="contacto">Contacto</a>
                         </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="novedades">Noticias</a>
+                        </li> 
                         @if( Auth::user() and Auth::user() -> is_admin)
                         <li class="nav-item">
-                        <a class="nav-link" href="noticias">Noticias</a>
+                        <a class="nav-link" href="noticias">Editar noticias</a>
                         </li>   
-                        @else
-                        <li class="nav-item">
-                        <a class="nav-link" href="novedades">Novedades</a>
-                        </li> 
                         @endif
                         
                         

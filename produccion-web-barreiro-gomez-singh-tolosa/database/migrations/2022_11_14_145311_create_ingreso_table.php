@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('marca');
             $table->string('producto');
             $table->text('descripcion');
+            $table->string('imagen');
             $table->boolean('is_visible')-> default(true);
             $table->timestamps();
         });

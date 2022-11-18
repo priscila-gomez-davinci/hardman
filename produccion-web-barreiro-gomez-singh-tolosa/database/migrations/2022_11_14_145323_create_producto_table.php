@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('producto');
             $table->text('descripcion');
             $table->integer('precio');
+            $table->string('imagen');
             $table->boolean('is_visible')-> default(true);
             $table->timestamps();
         });

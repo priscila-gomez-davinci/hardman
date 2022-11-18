@@ -96,9 +96,11 @@
                         <li class="nav-item">
                         <a class="nav-link" href="contacto">Contacto</a>
                         </li>
+                        @if( Auth::user() and Auth::user() -> is_admin)
                         <li class="nav-item">
                         <a class="nav-link" href="noticias">Noticias</a>
                         </li>
+                        @endif
                     </ul>
                 </div>
             </div>

@@ -33,8 +33,8 @@
                                 @if ($noticias->count() > 0)
                                     @foreach ($noticias as $noticia)
                                         <tr>
-                                            <td><img Storage::get({{ $noticia->imagen }});</td>
-                                            <td> {{ $noticia->titulo }} </td>
+                                            <td><img src="{{ asset('storage/' . $noticia->imagen) }}" height="200" width="200"></td>
+                                            <td> <b> {{ $noticia->titulo }}</b> </td>
                                             <td> {{ $noticia->descripcion }} </td>
                                             <td>
                                                 <a class="btn btn-primary" href="{{ route('noticias.show', ['noticia' => $noticia]) }}"> Ingresar </a>

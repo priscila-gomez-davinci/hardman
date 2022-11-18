@@ -19,7 +19,7 @@ class NoticiaFactory extends Factory
         return [
             'titulo' => fake() -> word, 
             'descripcion' => fake() -> text,
-            'imagen'=> fake() -> image(public_path('images'),640,480, null, false)
+            'imagen'=> fake() -> url()
         ];
     }
 }

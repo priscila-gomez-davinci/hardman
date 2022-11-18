@@ -6,6 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ $noticia->titulo }}</div>
+                <img src="{{ asset('storage/' . $noticia->imagen) }}" height="400" width="400">
                 <div class="card-body">
                     {{ $noticia->descripcion }}
                     <hr>

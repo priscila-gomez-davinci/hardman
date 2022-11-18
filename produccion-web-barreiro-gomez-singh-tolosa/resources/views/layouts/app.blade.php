@@ -99,8 +99,14 @@
                         @if( Auth::user() and Auth::user() -> is_admin)
                         <li class="nav-item">
                         <a class="nav-link" href="noticias">Noticias</a>
-                        </li>
+                        </li>   
+                        @else
+                        <li class="nav-item">
+                        <a class="nav-link" href="novedades">Novedades</a>
+                        </li> 
                         @endif
+                        
+                        
                     </ul>
                 </div>
             </div>

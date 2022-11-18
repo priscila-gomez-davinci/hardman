@@ -33,3 +33,4 @@ Route::get('/productos', [App\Http\Controllers\ProductosController::class, 'prod
 Route::get('/carrito', [App\Http\Controllers\CarritoController::class, 'carrito'])->name('carrito');
 Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingresos'])->name('ingresos');
 Route::get('/contacto', [App\Http\Controllers\ContactoController::class, 'contacto'])->name('contacto');
+Route::get('novedades', [App\Http\Controllers\NovedadesController::class, 'index'])->name('novedades');

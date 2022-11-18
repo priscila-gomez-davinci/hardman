@@ -13,12 +13,12 @@
                             @csrf
                             @method('PUT')
                             <div class="mb-4">
-                                <label for="titulo" class="form-label"> Nombre </label>
+                                <label for="titulo" class="form-label"> Titulo </label>
                                 <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el nombre del producto" value="{{ $noticia->titulo }}">
                             </div>
                             <div class="mb-4">
                                 <label for="descripcion" class="form-label"> Descripción </label>
-                                <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese la descripción del producto">{{ $noticia->descripcion }}</textarea>
+                                <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese la descripción de la noticia">{{ $noticia->descripcion }}</textarea>
                             </div>
                             <div class="mb-4">
                                 <label for="imagen" class="form-label"> Imagen </label>
@@ -28,7 +28,7 @@
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-success"> Modificar </button>
-                            <a class="btn btn-danger" href="{{ route('noticias.index') }}"> Cancelar </a>
+                            <a class="btn btn-danger" href="{{ route('novedades') }}"> Cancelar </a>
                         </form>
 
                     </div>

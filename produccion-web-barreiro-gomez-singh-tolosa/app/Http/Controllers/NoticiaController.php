@@ -110,7 +110,7 @@ class NoticiaController extends Controller
 
         return redirect()
             ->route('noticias.index')
-            ->with('status', 'El producto se ha modificado correctamente.');
+            ->with('status', 'La noticia se ha modificado correctamente.');
     }
 
 

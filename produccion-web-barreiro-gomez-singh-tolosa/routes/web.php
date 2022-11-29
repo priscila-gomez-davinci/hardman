@@ -28,6 +28,9 @@ Route::group( [ 'middleware' => ['is_admin'] ], function (){
 
 Route::resource('noticias', App\Http\Controllers\NoticiaController::class);
 
+Route::resource('productos', App\Http\Controllers\ProductosController::class);
+
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/productos', [App\Http\Controllers\ProductosController::class, 'productos'])->name('productos');
 Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingresos'])->name('ingresos');

@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Noticias') }}</div>
+                    <div class="card-header">{{ __('Productos') }}</div>
 
                     <div class="card-body">
 
@@ -16,41 +16,41 @@
                         @endif
 
                         <div class="mb-3">
-                        <a class="btn btn-primary" href="{{ route('noticias.create') }}"> Agregar Noticia </a>
+                        <a class="btn btn-primary" href="{{ route('productos.create') }}"> Agregar Producto </a>
                         </div>
 
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col">  Imagen </th>
-                                    <th scope="col"> Título </th>
-                                    <th scope="col"> Descripcion </th>
+                                    <th scope="col"> Producto </th>
+                                    <th scope="col"> Precio </th>
                                     <th scope="col">  </th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                @if ($noticias->count() > 0)
-                                    @foreach ($noticias as $noticia)
+                                @if ($productos->count() > 0)
+                                    @foreach ($productos as $producto)
                                         <tr>
-                                            <td><img src="{{ asset('storage/'. $noticia->imagen) }}" height="200" width="200"></td>
-                                            <td> <b> {{ $noticia->titulo }}</b> </td>
-                                            <td> {{ $noticia->descripcion }} </td>
+                                            <td><img src="{{ asset('storage/'. $producto->imagen) }}" height="200" width="200"></td>
+                                            <td> <b> {{ $producto->producto }}</b> </td>
+                                            <td> {{ $producto->precio }} </td>
                                             <td>
-                                                <a class="btn btn-primary" href="{{ route('noticias.show', ['noticia' => $noticia]) }}"> Ingresar </a>
+                                                <a class="btn btn-primary" href="{{ route('productos.show', ['producto' => $producto]) }}"> Ingresar </a>
                                             </td>
                                         </tr>
                                     @endforeach                           
                                 @else
                                     <tr>
-                                        <td class="text-center" colspan="4"> No existen noticias cargadas. </td>
+                                        <td class="text-center" colspan="4"> No existen productos cargados. </td>
                                     </tr>
                                 @endif
 
                             </tbody>
                         </table>
 
-                        {{$noticias->links() }}
+                        {{$productos->links() }}
                     </div>
                 </div>
             </div>

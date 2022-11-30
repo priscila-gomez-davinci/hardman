@@ -5,20 +5,20 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ $noticia->titulo }}</div>
+                    <div class="card-header">{{ $producto->titulo }}</div>
 
                     <div class="card-body">
 
-                        <form class="m-3" method="POST" action="{{ route('noticias.update', $noticia) }}" enctype="multipart/form-data">
+                        <form class="m-3" method="POST" action="{{ route('productos.update', $producto) }}" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="mb-4">
                                 <label for="titulo" class="form-label"> Titulo </label>
-                                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el nombre del producto" value="{{ $noticia->titulo }}">
+                                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el nombre del producto" value="{{ $producto->titulo }}">
                             </div>
                             <div class="mb-4">
                                 <label for="descripcion" class="form-label"> Descripción </label>
-                                <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese la descripción de la noticia">{{ $noticia->descripcion }}</textarea>
+                                <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese la descripción de la producto">{{ $producto->descripcion }}</textarea>
                             </div>
                             <div class="mb-4">
                                 <label for="imagen" class="form-label"> Imagen </label>

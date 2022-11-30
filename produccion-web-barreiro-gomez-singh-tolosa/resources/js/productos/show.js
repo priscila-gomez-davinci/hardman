@@ -3,10 +3,11 @@ import Swal from 'sweetalert2'
 const form_delete = document.getElementById('form-delete');
 const form_submit = document.getElementById('form-submit');
 
-const deleteNews = (event) => {
+const deleteProducto = (event) => {
     event.preventDefault();
+
     Swal.fire({
-        title: '¿Está seguro de eliminar esta noticia?',
+        title: '¿Está seguro de eliminar este producto?',
         showDenyButton: true,
         showCancelButton: true,
         confirmButtonText: 'Si',
@@ -22,4 +23,5 @@ const deleteNews = (event) => {
       })
 }
 
-form_submit.addEventListener('click', deleteNews);
+form_submit.addEventListener('click', deleteProducto);
+

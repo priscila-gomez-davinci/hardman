@@ -8,7 +8,11 @@
                 <div class="card-header">{{ $producto->producto }}</div>
                 <img src="{{ asset('storage/' . $producto->imagen) }}" height="400" width="400">
                 <div class="card-body">
-                    {{ $producto->descripcion }}
+                    <a><b>Producto: </b> {{ $producto->producto }}</a>
+                    <br>
+                    <a><b> Precio: </b>${{ $producto->precio }}</a>
+                    <br>
+                    <a><b>Descripcion: </b> {{ $producto->descripcion }}</a>
                     <hr>
                     <a class="btn btn-primary" href="{{ route('productos.index') }}"> Volver a productos </a>
                     <a class="btn btn-success" href="{{ route('productos.edit', ['producto' => $producto]) }}"> Editar producto </a>
@@ -22,7 +26,7 @@
         </div>
     </div>
 </div>
-@vite(['resources/js/noticias/show.js'])
+@vite(['resources/js/productos/show.js'])
 
 
 

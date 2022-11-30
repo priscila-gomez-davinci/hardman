@@ -33,7 +33,7 @@
                                             <td> <b> {{ $producto->producto }}</b> </td>
                                             <td> ${{ $producto->precio }} </td>
                                             <td>
-                                                <a class="btn btn-primary"> Agregar al carrito </a>
+                                                <button class="btn btn-primary" id="boton" > Agregar al carrito </button>
                                             </td>
                                         </tr>
                                     @endforeach                           
@@ -52,4 +52,5 @@
             </div>
         </div>
     </div>
+    @vite(['resources/js/tienda/show.js'])
 @endsection

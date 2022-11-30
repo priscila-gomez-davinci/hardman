@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Nueva noticia') }}</div>
+                    <div class="card-header">{{ __('Nuevo producto') }}</div>
 
                     <div class="card-body">
 
-                        <form class="m-3" method="POST" action="{{ route('noticias.store') }}" enctype="multipart/form-data">
+                        <form class="m-3" method="POST" action="{{ route('productos.store') }}" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-4">
                                 <label for="titulo" class="form-label"> Titulo </label>
@@ -33,7 +33,7 @@
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-success"> Crear </button>
-                            <a class="btn btn-danger" href="{{ route('noticias.index') }}"> Cancelar </a>
+                            <a class="btn btn-danger" href="{{ route('productos.index') }}"> Cancelar </a>
                         </form>
 
                     </div>

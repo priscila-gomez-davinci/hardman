@@ -87,7 +87,7 @@
                         <a class="nav-link" href="home">Home</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="productos">Productos</a>
+                        <a class="nav-link" href="tienda">Productos</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="contacto">Contacto</a>
@@ -100,7 +100,11 @@
                         <a class="nav-link" href="noticias">Editar noticias</a>
                         </li>   
                         @endif
-                        
+                        @if( Auth::user() and Auth::user() -> is_admin)
+                        <li class="nav-item">
+                        <a class="nav-link" href="productos">Editar productos</a>
+                        </li> 
+                        @endif 
                         
                     </ul>
                 </div>

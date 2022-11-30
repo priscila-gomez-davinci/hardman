@@ -11,7 +11,7 @@
                     {{ $producto->descripcion }}
                     <hr>
                     <a class="btn btn-primary" href="{{ route('productos.index') }}"> Volver a productos </a>
-                    <a class="btn btn-success" href="{{ route('productos.edit', ['productos' => $productos]) }}"> Editar producto </a>
+                    <a class="btn btn-success" href="{{ route('productos.edit', ['producto' => $producto]) }}"> Editar producto </a>
                     <form id="form-delete" class="d-inline" method="POST" action="{{ route('productos.destroy', $producto) }}">
                         @csrf
                         @method('DELETE')

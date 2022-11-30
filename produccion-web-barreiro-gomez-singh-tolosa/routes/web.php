@@ -29,10 +29,10 @@ Route::group( [ 'middleware' => ['is_admin'] ], function (){
 Route::resource('noticias', App\Http\Controllers\NoticiaController::class);
 
 Route::resource('productos', App\Http\Controllers\ProductosController::class);
+Route::resource('tienda', App\Http\Controllers\TiendaController::class);
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingresos'])->name('ingresos');
 Route::get('/contacto', [App\Http\Controllers\ContactoController::class, 'contacto'])->name('contacto');
 Route::get('novedades', [App\Http\Controllers\NovedadesController::class, 'index'])->name('novedades');
-Route::get('tienda', [App\Http\Controllers\TiendaController::class, 'index'])->name('tienda');

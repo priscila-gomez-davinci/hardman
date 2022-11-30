@@ -59,8 +59,10 @@ class ProductosController extends Controller
         $imagen = $request->file('imagen')->storeAs('producto', $imagen_nombre, 'public');
         
         Producto::create([
-            'titulo' => $request->titulo,
+            'marca' => $request->marca,
+            'producto' => $request->producto,
             'descripcion' => $request->descripcion,
+            'precio' => $request->precio,
             'imagen' => $imagen
         ]);
 

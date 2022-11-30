@@ -28,7 +28,7 @@
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-success"> Modificar </button>
-                            <a class="btn btn-danger" href="{{ route('novedades') }}"> Cancelar </a>
+                            <a class="btn btn-danger" href="{{ route('tienda') }}"> Cancelar </a>
                         </form>
 
                     </div>

@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Nueva noticia') }}</div>
+                    <div class="card-header navbar navbar-expand-md navbar-dark bg-dark mb-4 blanco text-center">{{ __('Nueva noticia') }}</div>
 
                     <div class="card-body">
 
@@ -42,4 +42,5 @@
             </div>
         </div>
     </div>
+    <?php echo View::make('_footer'); ?>
 @endsection

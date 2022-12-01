@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ $noticia->titulo }}</div>
+                <div class="card-header navbar navbar-expand-md navbar-dark bg-dark mb-4 blanco text-center">{{ $noticia->titulo }}</div>
                 <img src="{{ asset('storage/' . $noticia->imagen) }}" height="400" width="400">
                 <div class="card-body">
                     {{ $noticia->descripcion }}
@@ -26,5 +26,5 @@
 
 
 
-
+<?php echo View::make('_footer'); ?>
 @endsection

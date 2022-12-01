@@ -29,4 +29,5 @@
     </div>
   </div>
 </html>
+<?php echo View::make('_footer'); ?>
 @endsection

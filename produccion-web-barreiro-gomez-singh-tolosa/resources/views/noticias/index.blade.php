@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Noticias') }}</div>
+                    <div class="card-header navbar navbar-expand-md navbar-dark bg-dark mb-4 blanco text-center">{{ __('Noticias') }}</div>
 
                     <div class="card-body">
 
@@ -16,7 +16,7 @@
                         @endif
 
                         <div class="mb-3">
-                        <a class="btn btn-primary" href="{{ route('noticias.create') }}"> Agregar Noticia </a>
+                        <a class="btn btn-primary buttons-primary" href="{{ route('noticias.create') }}"> Agregar Noticia </a>
                         </div>
 
                         <table class="table">
@@ -37,7 +37,7 @@
                                             <td> <b> {{ $noticia->titulo }}</b> </td>
                                             <td> {{ $noticia->descripcion }} </td>
                                             <td>
-                                                <a class="btn btn-primary" href="{{ route('noticias.show', ['noticia' => $noticia]) }}"> Ingresar </a>
+                                                <a class="btn buttons-primary" href="{{ route('noticias.show', ['noticia' => $noticia]) }}"> Ingresar </a>
                                             </td>
                                         </tr>
                                     @endforeach                           
@@ -56,4 +56,5 @@
             </div>
         </div>
     </div>
+    <?php echo View::make('_footer'); ?>
 @endsection

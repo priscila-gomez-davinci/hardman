@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ $producto->producto }}</div>
+                <div class="card-header navbar navbar-expand-md navbar-dark bg-dark mb-4 blanco text-center">{{ $producto->producto }}</div>
                 <img src="{{ asset('storage/' . $producto->imagen) }}" height="400" width="400">
                 <div class="card-body">
                     <a><b>Producto: </b> {{ $producto->producto }}</a>
@@ -26,6 +26,7 @@
         </div>
     </div>
 </div>
+<?php echo View::make('_footer'); ?>
 @vite(['resources/js/productos/show.js'])
 
 

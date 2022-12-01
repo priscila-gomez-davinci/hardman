@@ -9,7 +9,7 @@ const deleteProducto = (event) => {
     Swal.fire({
         title: '¿Está seguro de eliminar este producto?',
         showDenyButton: true,
-        showCancelButton: true,
+        showCancelButton: false,
         confirmButtonText: 'Si',
         denyButtonText: `No`,
       }).then((result) => {

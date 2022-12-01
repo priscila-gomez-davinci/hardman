@@ -8,7 +8,7 @@ const deleteNews = (event) => {
     Swal.fire({
         title: '¿Está seguro de eliminar esta noticia?',
         showDenyButton: true,
-        showCancelButton: true,
+        showCancelButton: false,
         confirmButtonText: 'Si',
         denyButtonText: `No`,
       }).then((result) => {

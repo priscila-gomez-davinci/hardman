@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Productos') }}</div>
+                    <div class="card-header navbar navbar-expand-md navbar-dark bg-dark mb-4 blanco text-center">{{ __('Productos') }}</div>
 
                     <div class="card-body">
 
@@ -33,7 +33,7 @@
                                             <td> <b> {{ $producto->producto }}</b> </td>
                                             <td> ${{ $producto->precio }} </td>
                                             <td>
-                                                <button class="btn btn-primary" id="boton" > Agregar al carrito </button>
+                                                <button class="btn buttons-primary" id="boton" > Agregar al carrito </button>
                                             </td>
                                         </tr>
                                     @endforeach                           
@@ -52,5 +52,6 @@
             </div>
         </div>
     </div>
-    @vite(['resources/js/tienda/show.js'])
+    @vite(['resources/js/tienda/show.js','resources/css/app.css']) 
+    <?php echo View::make('_footer'); ?>
 @endsection

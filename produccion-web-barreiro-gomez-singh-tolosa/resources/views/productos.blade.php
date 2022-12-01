@@ -74,4 +74,5 @@ const btns = document.querySelectorAll('.boton');
     });
   }
 </script>
+<?php echo View::make('_footer'); ?>
 @endsection

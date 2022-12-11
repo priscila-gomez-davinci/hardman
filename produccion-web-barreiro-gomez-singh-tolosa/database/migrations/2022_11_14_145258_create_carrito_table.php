@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('carritos', function (Blueprint $table) {
             $table->id();
             $table->integer('productos');
+            $table->integer('precio');
             $table->boolean('is_visible')-> default(true);
             $table->timestamps();
         });

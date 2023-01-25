@@ -9,13 +9,10 @@ class Carrito extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "productos",
+        "marca",
+        "producto",
         "precio", 
-        "is_visible"
+        "imagen"
     ];
 
-    public function producto()
-    {
-        return $this->hasMany(Producto::class, 'id', 'productos');
-    }
 }

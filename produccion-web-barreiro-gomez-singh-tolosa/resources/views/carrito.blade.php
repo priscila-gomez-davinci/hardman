@@ -4,7 +4,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header navbar navbar-expand-md navbar-dark bg-dark mb-4 blanco text-center">{{ __('Productos') }}</div>
+                    <div class="card-header navbar navbar-expand-md navbar-dark bg-dark mb-4 blanco text-center">{{ __('Carrito') }}</div>
 
                     <div class="card-body">
 
@@ -14,29 +14,23 @@
                             </div>
                         @endif
 
-                        <div class="mb-3">
-                        <a class="btn btn-primary buttons-primary" href="{{ route('productos.create') }}"> Agregar Producto </a>
-                        </div>
-
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">  Imagen </th>
+                                    <th scope="col"> </th>
                                     <th scope="col"> Producto </th>
                                     <th scope="col"> Precio </th>
-                                    <th scope="col">  </th>
                                 </tr>
                             </thead>
                             <tbody>
 
-                                @if ($productos->count() > 0)
-                                    @foreach ($productos as $producto)
+                                @if ($carrito->count() > 0)
+                                    @foreach ($carrito as $producto)
                                         <tr>
                                             <td><img src="{{ asset('storage/'. $producto->imagen) }}" height="200" width="200"></td>
                                             <td> <b> {{ $producto->producto }}</b> </td>
                                             <td> ${{ $producto->precio }} </td>
                                             <td>
-                                                <a class="btn btn-primary buttons-primary" href="{{ route('productos.show', ['producto' => $producto]) }}"> Ingresar </a>
                                             </td>
                                         </tr>
                                     @endforeach                           
@@ -48,8 +42,6 @@
 
                             </tbody>
                         </table>
-
-                        {{$productos->links() }}
                     </div>
                 </div>
             </div>

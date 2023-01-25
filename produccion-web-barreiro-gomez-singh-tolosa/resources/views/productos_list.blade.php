@@ -44,7 +44,18 @@ $productos = Producto::all();
             <p> $<?php echo $producto['precio'] ?></p>
           </div>
           <div>
-            <button id="boton" class="btn-primary button">Agregar</button>
+          <div> 
+          <form action="{{ route('carrito.store') }}" method="POST">
+           {{ csrf_field() }}
+           <div class="form-group row">>
+            <input type="hidden" value="{{ $producto->marca }}" id="marca" name="marca">
+            <input type="hidden" value="{{ $producto->producto }}" id="producto" name="producto">
+            <input type="hidden" value="{{ $producto->precio }}" id="precio" name="precio">
+            <input type="hidden" value="{{ $producto->imagen }}" id="imagen" name="imagen">
+            <button id= "form-submit" class="btn-primary button" type="submit"> Agregar al carrito </button>
+            </div>
+          </form>
+          </div>
             </div>
           </div>
         </div>
@@ -63,7 +74,7 @@ $productos = Producto::all();
   @section('scripts')
   <script src="sweetalert2.all.min.js"></script>
 <script>
-const btns = document.querySelectorAll('.boton');
+const btns = document.querySelectorAll('.form-submit');
   for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', function (e) {
       Swal.fire(

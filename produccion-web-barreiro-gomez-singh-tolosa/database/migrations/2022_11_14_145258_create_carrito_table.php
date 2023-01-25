@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('carritos', function (Blueprint $table) {
             $table->id();
-            $table->integer('productos');
+            $table->string('marca');
+            $table->string('producto');
             $table->integer('precio');
+            $table->string('imagen');
             $table->boolean('is_visible')-> default(true);
             $table->timestamps();
         });

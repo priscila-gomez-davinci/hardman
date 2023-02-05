@@ -46,7 +46,7 @@
 
                             </tbody>
                         </table>
-                        <button class="btn-primary button"> Comprar carrito</button>
+                        <button class="btn btn-primary buttons-primary"> Comprar carrito</button>
 
                     </div>
                 </div>

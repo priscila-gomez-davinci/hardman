@@ -28,6 +28,9 @@ class CarritoController extends Controller
             'precio' => $request->precio,
             'imagen' =>  $request->imagen
         ]);
+        return redirect()
+        ->route('carrito.index')
+        ->with('status', 'El producto se ha agregado correctamente al carrito.');
     }
 
     public function destroy(Carrito $carrito)

@@ -47,7 +47,7 @@ class ProductosController extends Controller
 
         if($validator->fails()){
             return redirect()
-                ->route('producto.create')
+                ->route('productos.create')
                 ->withErrors($validator)
                 ->withInput();
         }

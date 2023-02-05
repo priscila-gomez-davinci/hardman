@@ -13,18 +13,31 @@
                             @csrf
                             <div class="mb-4">
                                 <label for="titulo" class="form-label"> Titulo </label>
-                                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Ingrese el titulo de la noticia" value="{{ old('titulo') }}">
-                                @error('titulo')
+                                <input type="text" class="form-control" id="marca" name="marca" placeholder="Ingrese la marca del producto" value="{{ old('marca') }}">
+                                @error('marca')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="mb-4">
-                                <label for="descripcion" class="form-label"> Descripción </label>
-                                <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese la descripción de la noticia">{{ old('descripcion') }}</textarea>
-                                @error('descripcion')
+                                <label for="descripcion" class="form-label"> Nombre </label>
+                                <textarea class="form-control" name="producto" id="producto" cols="30" rows="10" placeholder="Ingrese el nombre del producto">{{ old('producto') }}</textarea>
+                                @error('producto')
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="mb-4">
+                                <label for="precio" class="form-label"> Precio </label>
+                                <input type="number" class="form-control" id="precio" name="precio" placeholder="Ingrese el precio del producto" value="{{ old('precio')}}">
+                            
+                                @error('precio')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror</div>
+
+                            <div class="mb-4">
+                                <label for="descripcion" class="form-label"> Producto </label>
+                                <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Ingrese la descripción de la producto">{{ old('descripcion') }}</textarea>
+                            </div>
+
                             <div class="mb-4">
                                 <label for="imagen" class="form-label"> Imagen </label>
                                 <input type="file" class="form-control" id="imagen" name="imagen">

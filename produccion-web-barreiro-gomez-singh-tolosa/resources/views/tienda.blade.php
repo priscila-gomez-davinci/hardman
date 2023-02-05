@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('style')
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+@endsection
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -40,7 +42,7 @@
                                                 <input type="hidden" value="{{ $producto->producto }}" id="producto" name="producto">
                                                 <input type="hidden" value="{{ $producto->precio }}" id="precio" name="precio">
                                                 <input type="hidden" value="{{ $producto->imagen }}" id="imagen" name="imagen">
-                                                <button id= "button" class="btn-primary button" type="submit"> Agregar al carrito </button>
+                                                <button id= "btn" class="btn-primary button" type="submit"> Agregar al carrito </button>
                                                 </div>
                                             </form>
                                             </td>
@@ -65,26 +67,9 @@
 @endsection
 
 
-@section('scripts')
-<script src="../js/app.js"></script>
-@endsection
-@section('style')
-<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-@endsection
+
 
 @section('scripts')
+<script src="../js/tienda/show.js"></script>
   <script src="sweetalert2.all.min.js"></script>
-<script>
-const btns = document.querySelectorAll('.button');
-  for (let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function (e) {
-      Swal.fire(
-          '¡Excelente!',
-          'Agregaste un ítem a tu carrito.',
-          'success'
-        )
-    });
-  }
-</script>
-<?php echo View::make('_footer'); ?>
 @endsection

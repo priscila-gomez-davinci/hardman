@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('style')
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
+
 @endsection
 @section('content')
     <div class="container">

@@ -16,12 +16,15 @@
     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="sweetalert2.min.css">  
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+
         <!-- JavaScript -->
     <script src="../lib/jquery/jquery-3.3.1.min.js"></script>
     <script src="../lib/popper/popper.min.js"></script>
     <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="/cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src= "..scripts/dialog.js"></script>
+    
 
 
 </head>
@@ -94,7 +97,7 @@
                         <a class="nav-link" href="tienda">Productos</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="contacto">Contacto</a>
+                        <a class="nav-link" href="contact">Contacto</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="novedades">Noticias</a>

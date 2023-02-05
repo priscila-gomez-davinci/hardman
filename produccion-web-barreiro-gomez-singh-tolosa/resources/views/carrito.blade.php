@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 @endsection
 @section('content')
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -45,11 +46,12 @@
 
                             </tbody>
                         </table>
+                        <button class="btn-primary button"> Comprar carrito</button>
+
                     </div>
                 </div>
             </div>
         </div>
-        <button class="btn-primary button"> Comprar carrito</button>
     </div>
     <?php echo View::make('_footer'); ?>
 @endsection

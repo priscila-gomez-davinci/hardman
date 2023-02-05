@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 @endsection
 @section('content')
-
+<?php global $total; ?>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -34,8 +34,9 @@
                                             <td><img src="{{ asset('storage/'. $producto->imagen) }}" height="200" width="200"></td>
                                             <td> <b> {{ $producto->producto }}</b> </td>
                                             <td> ${{ $producto->precio }} </td>
-                                            <td>
+                                            <td> <?php ($total += $producto->precio); ?>
                                             </td>
+                                            
                                         </tr>
                                     @endforeach                           
                                 @else
@@ -46,8 +47,18 @@
 
                             </tbody>
                         </table>
-                        <button class="btn btn-primary buttons-primary"> Comprar carrito</button>
-
+                        <div class="father">
+                            <div class="child">
+                            <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"> <a>Total $ <?php echo $total ?></a></th>
+                                    <th scope="col"><button class="btn btn-primary buttons-primary"> Comprar carrito</button></th>
+                                </tr>
+                            </thead>
+                            </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

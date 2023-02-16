@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Carrito;
+use Illuminate\Support\Facades\DB;
+
 class CarritoController extends Controller
 {
     public function index()
@@ -35,8 +37,9 @@ class CarritoController extends Controller
         return redirect('carrito');
      }
 
-    public function handle()
+    public function delete()
     {
-        Carrito::whereNotNull('id')->delete();
+        Carrito::truncate();
+        return redirect('carrito');
     }
 }

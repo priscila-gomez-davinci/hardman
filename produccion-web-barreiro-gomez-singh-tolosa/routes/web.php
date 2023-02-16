@@ -16,7 +16,7 @@ use App\Http\Controllers\NoticiaController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes();
@@ -39,3 +39,8 @@ Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingres
 Route::get('novedades', [App\Http\Controllers\NovedadesController::class, 'index'])->name('novedades');
 Route::get('contacted', [App\Http\Controllers\ContactController::class, 'contacted'])->name('contacted');
 Route::get('aboutus', [App\Http\Controllers\AboutusController::class, 'aboutus'])->name('aboutus');
+
+Route::controller(CarritoController::class)->group(function(){
+    Route::get('carrito/delete', 'delete')->name('carrito.delete');
+
+});

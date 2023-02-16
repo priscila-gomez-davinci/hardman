@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Producto;
-use App\Models\Carrito;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Validator;
-
+use App\Models\Carrito;
 class CarritoController extends Controller
 {
     public function index()
@@ -33,11 +29,14 @@ class CarritoController extends Controller
         ->with('status', 'El producto se ha agregado correctamente al carrito.');
     }
 
-    public function destroy(Carrito $carrito)
-    {
-        $carrito->update([
-            'is_visible' => false,
-        ]);
-    }
+    public function destroy($id)
+    { 
+        Carrito::where('id', $id)->delete();
+        return redirect('carrito');
+     }
 
+    public function handle()
+    {
+        Carrito::whereNotNull('id')->delete();
+    }
 }

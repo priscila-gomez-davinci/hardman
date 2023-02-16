@@ -35,10 +35,33 @@
                                             <td> <b> {{ $producto->producto }}</b> </td>
                                             <td> ${{ $producto->precio }} </td>
                                             <td> <?php ($total += $producto->precio); ?>
+                                            <td>
+                                            <form id="form-delete" method="POST" class="d-inline" action="{{ route('carrito.destroy', $producto->id) }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                    <button id= "btn" class="btn btn-danger" type="submit"> Eliminar </button>
+                                            </form>
                                             </td>
-                                            
                                         </tr>
-                                    @endforeach                           
+                                    @endforeach      
+                                    <div>
+                                            <div>
+                                            <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"> <a>Total $ <?php echo $total ?></a></th>
+                                                    <th scope="col"><button class="btn-primary buttons-primary"> Comprar carrito</button></th>
+                                                    <th scope="col">
+                                                    <form id="form-delete" method="POST" class="d-inline" >
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button id= "form-submit" class="btn btn-danger" type="submit">Vaciar carrito</button>
+                                                    </form>
+                                                </tr>
+                                            </thead>
+                                            </table>
+                                            </div>
+                        </div>                     
                                 @else
                                     <tr>
                                         <td class="text-center" colspan="4"> No existen productos en el carrito. </td>
@@ -47,22 +70,12 @@
 
                             </tbody>
                         </table>
-                        <div class="father">
-                            <div class="child">
-                            <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col"> <a>Total $ <?php echo $total ?></a></th>
-                                    <th scope="col"><button class="btn btn-primary buttons-primary"> Comprar carrito</button></th>
-                                </tr>
-                            </thead>
-                            </table>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    @vite(['resources/js/carrito/show.js'])
     <?php echo View::make('_footer'); ?>
 @endsection

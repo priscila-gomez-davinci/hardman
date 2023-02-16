@@ -9,10 +9,12 @@ class Carrito extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "marca",
+
+        "marca", 
         "producto",
         "precio", 
-        "imagen"
+        "imagen", 
+        "is_visible"
     ];
 
 }

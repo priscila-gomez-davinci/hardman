@@ -52,7 +52,7 @@ $productos = Producto::all();
             <input type="hidden" value="{{ $producto->producto }}" id="producto" name="producto">
             <input type="hidden" value="{{ $producto->precio }}" id="precio" name="precio">
             <input type="hidden" value="{{ $producto->imagen }}" id="imagen" name="imagen">
-            <button id= "form-submit" class="btn-primary button" type="submit"> Agregar al carrito </button>
+            <button id= "form-submit" class="btn-primary buttons-primary" type="submit"> Agregar al carrito </button>
             </div>
           </form>
           </div>

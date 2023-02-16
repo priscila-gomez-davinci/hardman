@@ -96,6 +96,12 @@
                         <li class="nav-item">
                         <a class="nav-link" href="tienda">Productos</a>
                         </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link" href="aboutus">Sobre nosotros</a>
+                        </li>
+
+
                         <li class="nav-item">
                         <a class="nav-link" href="contact">Contacto</a>
                         </li>

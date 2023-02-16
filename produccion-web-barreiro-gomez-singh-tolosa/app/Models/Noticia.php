@@ -15,6 +15,6 @@ class Noticia extends Model
         "descripcion",
         "imagen", 
         "is_visible", 
-        "imagen"
+        "imagen",
     ];
 }

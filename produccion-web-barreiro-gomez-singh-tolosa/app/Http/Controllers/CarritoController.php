@@ -47,7 +47,6 @@ class CarritoController extends Controller
 
     public function payment()
     {
-        return redirect()
-        ->route('payment.index');
+        return view('payment');
     }
 }

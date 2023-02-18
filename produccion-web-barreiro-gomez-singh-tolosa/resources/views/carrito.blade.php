@@ -51,9 +51,12 @@
                                                 <tr>
                                                     <th scope="col"> <a>Total $ <?php echo $total ?></a></th>
                                                     <th scope="col">
-                                                    <form  class="d-inline" href="{{ route('carrito.payment') }}" >
-                                                        <button class="btn-primary buttons-primary btn"> Comprar carrito</button></th>
+
+                                                    <form class="d-inline" action="{{ route('payment.index') }}" >
+                                                        <button class="btn-primary buttons-primary btn"  type="submit"> Comprar carrito</button>
                                                     </form>
+                                                       
+                                                    </th>
                                                     <th scope="col">
                                                     <form method="POST" class="d-inline" action="{{ route('carrito.delete') }}" >
                                                         @csrf

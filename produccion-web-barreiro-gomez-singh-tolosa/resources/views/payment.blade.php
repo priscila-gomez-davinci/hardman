@@ -61,6 +61,15 @@ label {
   font-size: 24px;
 }
 
+.central {
+  font-family: arial;
+  font-size: 24px;
+  margin: 25px;
+  width: 350px;
+  height: 200px;
+  outline: dashed 1px black;
+}
+
 .btn {
   background-color: #04AA6D;
   color: white;
@@ -107,15 +116,16 @@ span.price {
 @section('content')
 <body>
 
-<div class="row">
+<div class="row container">
   <div class="col-75">
     <div>
-      
+      <form method="POST" action="{{ route('payment.return') }}"  enctype="multipart/form-data">
+      @csrf
         <div class="row">
           <div class="col-50">
             <h3>Direccion de entrega</h3>
             <label for="fname"><i class="fa fa-user"></i> Nombre completo</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <input type="text" id="fname" placeholder="John M. Doe">
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" placeholder="john@example.com">
             <label for="adr"><i class="fa fa-address-card-o"></i> Direccion de entrega</label>
@@ -163,12 +173,12 @@ span.price {
           </div>
           
         </div>
-        <input type="submit" value="Continuar con pago" class="btn btn btn-success">
+        <input type="submit" value="Continuar con pago" class="btn btn btn-success" >
       </form>
     </div>
   </div>
 </div>
 </body>
-</html>
+
 <?php echo View::make('_footer'); ?>
 @endsection

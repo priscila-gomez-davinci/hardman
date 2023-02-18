@@ -34,6 +34,7 @@ Route::resource('productos', App\Http\Controllers\ProductosController::class);
 Route::resource('carrito', App\Http\Controllers\CarritoController::class);
 Route::resource('tienda', App\Http\Controllers\TiendaController::class);
 Route::resource('contact', App\Http\Controllers\ContactController::class);
+Route::resource('payment', App\Http\Controllers\PaymentController::class);
 
 
 
@@ -42,9 +43,12 @@ Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingres
 Route::get('novedades', [App\Http\Controllers\NovedadesController::class, 'index'])->name('novedades');
 Route::get('contacted', [App\Http\Controllers\ContactController::class, 'contacted'])->name('contacted');
 Route::get('aboutus', [App\Http\Controllers\AboutusController::class, 'aboutus'])->name('aboutus');
-Route::get('payment', [App\Http\Controllers\PaymentController::class, 'index'])->name('payment');
 
 
 Route::controller(CarritoController::class)->group(function(){
     Route::delete('carrito/', 'delete')->name('carrito.delete');
+});
+
+Route::controller(PaymentController::class)->group(function(){
+    Route::post('payment/return', 'return')->name('payment.return');
 });

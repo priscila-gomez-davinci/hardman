@@ -50,12 +50,15 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col"> <a>Total $ <?php echo $total ?></a></th>
-                                                    <th scope="col"><button class="btn-primary buttons-primary btn"> Comprar carrito</button></th>
                                                     <th scope="col">
-                                                    <form id="form-delete" method="POST" class="d-inline" >
+                                                    <form  class="d-inline" href="{{ route('carrito.payment') }}" >
+                                                        <button class="btn-primary buttons-primary btn"> Comprar carrito</button></th>
+                                                    </form>
+                                                    <th scope="col">
+                                                    <form method="POST" class="d-inline" action="{{ route('carrito.delete') }}" >
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button id= "form-submit" href="{{ route('carrito.delete') }}" class="btn btn-danger" type="submit">Vaciar carrito</button>
+                                                        <button id= "form-submit"  class="btn btn-danger" type="submit">Vaciar carrito</button>
                                                     </form>
                                                 </tr>
                                             </thead>

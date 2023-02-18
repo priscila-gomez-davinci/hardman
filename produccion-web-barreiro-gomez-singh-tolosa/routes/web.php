@@ -4,6 +4,8 @@ use App\Http\Controllers\CarritoController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Carrito;
 use App\Http\Controllers\NoticiaController;
+use App\Http\Controllers\PaymentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,13 +36,15 @@ Route::resource('tienda', App\Http\Controllers\TiendaController::class);
 Route::resource('contact', App\Http\Controllers\ContactController::class);
 
 
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/ingresos', [App\Http\Controllers\IngresosController::class, 'ingresos'])->name('ingresos');
 Route::get('novedades', [App\Http\Controllers\NovedadesController::class, 'index'])->name('novedades');
 Route::get('contacted', [App\Http\Controllers\ContactController::class, 'contacted'])->name('contacted');
 Route::get('aboutus', [App\Http\Controllers\AboutusController::class, 'aboutus'])->name('aboutus');
+Route::get('payment', [App\Http\Controllers\PaymentController::class, 'index'])->name('payment');
+
 
 Route::controller(CarritoController::class)->group(function(){
-    Route::get('carrito/delete', 'delete')->name('carrito.delete');
-
+    Route::delete('carrito/', 'delete')->name('carrito.delete');
 });

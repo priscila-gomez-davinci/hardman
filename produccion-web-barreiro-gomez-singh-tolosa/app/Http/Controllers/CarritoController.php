@@ -39,7 +39,14 @@ class CarritoController extends Controller
 
     public function delete()
     {
-        Carrito::truncate();
-        return redirect('carrito');
+        Carrito::whereNotNull('id')->delete();
+        return redirect()
+        ->route('carrito.index')
+        ->with('status', 'Se ha eliminado el contenido del carrito');
+    }
+
+    public function payment()
+    {
+        return view('payment.index');
     }
 }
